@@ -15,7 +15,14 @@
 <body>
     <div id="app">
         
-		hello world
+		<img :src="imgSrcArr[index]" alt="" width="500" style="border-radius: 10px" @click="onclick">
+        <easy-preview :img-src="imgSrcArr[index]" :options="options" :show-preview="showPreview" @click-close-button="onClickCloseButton">
+        </easy-preview>
+        <button style="position: fixed; z-index: 1; top: 50%; left: 0%; transform: translateY(-50%)" @click="changeIndex">上一个</button>
+        <button style="position: fixed; z-index: 1; top: 50%; right: 0%; transform: translateY(-50%)" @click="changeIndex">下一个</button>
+        <easy-preview :img-src="imgSrcArr[2]">
+            <img :src="imgSrcArr[2]" width="500" style="border-radius: 10px" alt="">
+        </easy-preview>
 
 
     </div>
